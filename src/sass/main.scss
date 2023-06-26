@@ -1,0 +1,114 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: sandybrown;
+}
+h1{
+    font-size: 60px;
+}
+ul{
+    padding: 0;
+}
+li{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.checkbox {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+
+    input[type="checkbox"] {
+        opacity: 0;
+        width: 0;
+        height: 0;
+
+        &:checked + .checkmark {
+            background-color: #007aff;
+            border-color: #007aff;
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 12px;
+                height: 12px;
+                background-color: #fff;
+                border-radius: 50%;
+            }
+        }   
+    }
+  
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      border: 2px solid #c4c4c4;
+      border-radius: 50%;
+      cursor: pointer;
+  
+        &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+        }
+    }
+}
+
+.checked {
+text-decoration: line-through;
+opacity: 0.6;
+}
+.checked{
+    text-decoration: line-through;
+}
+.product_name{
+    font-size: 22px;
+}
+.input_product{
+    padding: 0 10px 0 10px;
+    width: 220px;
+    height: 38px;
+    border-radius: 15px;
+    border-width: 1px;
+}
+.addButton{
+    height: 40px;
+    width: 60px;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 15px;
+    border-width: 1px;
+}
+.delete{
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    i{
+        color: black;
+        opacity: 70%;
+        &:hover{
+            opacity: 100%;
+            transition: 0.2s all;
+        }
+    }
+}
